@@ -1,0 +1,66 @@
+.stars{
+    height:150px;
+    width:500px;
+    position: center;
+}
+
+.stars input{
+    display: none;
+}
+
+.stars label{
+    float:right;
+    font-size:100px;
+    color: lightgray;
+    margin:0 5px;
+    text-shadow: 1px 1px #bbb;
+}
+
+.stars label:before{
+    content:'✩';
+}
+
+.stars input:checked ~ label{
+    color:gold;
+    text-shadow: 1px 1px #c60;
+}
+
+.stars input:checked > label:hover,
+.stars input:checked > label:hover{
+    color: red;
+    text-shadow: 1px 1px goldenrod;
+}
+
+.stars .result:before{
+  
+    content: '';
+    left: 50%;
+    /* transform: translateX(-50%); */
+    bottom: -30px;
+    font-size: 30px;
+    font-weight: 500;
+    color: blue;
+    font-family: 'Poppins', sans-serif;
+    display: none;
+}
+
+.stars input:checked ~ .result:before{
+    display:block;
+    padding-left:220px;
+}
+
+.stars #five:checked ~ .result:before{
+    content: "Excellent 😍";
+}
+.stars #four:checked ~ .result:before{
+    content: "better 😊";
+}
+.stars #three:checked ~ .result:before{
+    content: "good 🙂";
+}
+.stars #two:checked ~ .result:before{
+    content: "Bad 😐";
+}
+.stars #one:checked ~ .result:before{
+    content: "Worst 😑";
+}
